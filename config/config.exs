@@ -29,7 +29,7 @@ use Mix.Config
 #
 #     import_config "#{Mix.env}.exs"
 
-config :sendgrid,
+config :elixir_example, BambooExample.Mailer,
+  adapter: Bamboo.SendgridAdapter,
   api_key: System.get_env("SENDGRID_API_KEY")
-config :elixir_example, ElixirExample.Mailer,
-  adapter: Bamboo.LocalAdapter
+config :sendgrid, api_key: System.get_env("SENDGRID_API_KEY")

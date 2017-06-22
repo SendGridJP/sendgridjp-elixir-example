@@ -12,7 +12,11 @@ defmodule ElixirExample do
       :world
 
   """
-  def hello do
-    :world
+  # def hello do
+  #   :world
+  # end
+  def send do
+    BambooExample.Email.email |> BambooExample.Mailer.deliver_now
   end
+
 end
