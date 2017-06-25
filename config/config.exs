@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :elixir_example, key: :value
+#     config :sendgridjp_elixir_example, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:elixir_example, :key)
+#     Application.get_env(:sendgridjp_elixir_example, :key)
 #
 # Or configure a 3rd-party app:
 #
@@ -29,7 +29,4 @@ use Mix.Config
 #
 #     import_config "#{Mix.env}.exs"
 
-config :elixir_example, BambooExample.Mailer,
-  adapter: Bamboo.SendgridAdapter,
-  api_key: System.get_env("SENDGRID_API_KEY")
 config :sendgrid, api_key: System.get_env("SENDGRID_API_KEY")
