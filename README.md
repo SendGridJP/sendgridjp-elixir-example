@@ -18,12 +18,22 @@ $ vi sendgridjp_elixir_example.ex
 
 ## 実行
 
+iexを起動します。
+
 ```
-# サンプルコードを実行します。
 $ iex -S mix
+```
+
+単一の宛先に1通のメールを送信するサンプルを実行します。
+
+```
 iex(1)> SendgridjpElixirExample.send_to_a_single_recipient
 :ok
+```
 
+複数の宛先にそれぞれ1通のメールを送信するサンプルを実行します。
+
+```
 iex(2)> SendgridjpElixirExample.send_to_multiple_recipients
 %HTTPoison.Response{body: "",
  headers: [{"Server", "nginx"}, {"Date", "Sun, 25 Jun 2017 06:07:14 GMT"},
@@ -38,7 +48,11 @@ iex(2)> SendgridjpElixirExample.send_to_multiple_recipients
   {"X-No-CORS-Reason",
    "https://sendgrid.com/docs/Classroom/Basics/API/cors.html"}],
  status_code: 202}
+```
 
+バウンスリストを取得するサンプルを実行します。
+
+```
 iex(3)> SendgridjpElixirExample.get_bounces
 %HTTPoison.Response{body: [],
  headers: [{"Server", "nginx"}, {"Date", "Sun, 25 Jun 2017 06:07:28 GMT"},

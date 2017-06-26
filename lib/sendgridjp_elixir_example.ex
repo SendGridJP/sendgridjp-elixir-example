@@ -21,7 +21,7 @@ defmodule SendgridjpElixirExample do
       Email.build()
       |> Email.add_to("to@example.com")
       |> Email.put_from("from@example.com", "送信者名")
-      |> Email.put_subject("[sendgrid-elixir-example] フクロウのお名前はfullnameさん")
+      |> Email.put_subject("[sendgridjp-elixir-example] フクロウのお名前はfullnameさん")
       |> Email.put_text("familyname さんは何をしていますか？\r\n 彼はplaceにいます。")
       |> Email.put_html("<strong> familyname さんは何をしていますか？</strong><br />彼はplaceにいます。")
       |> Email.add_substitution("fullname", "田中 太郎")
